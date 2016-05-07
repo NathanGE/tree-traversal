@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'depth_first2'
+require_relative 'depth_first'
 
 class DepthFirstTest < MiniTest::Unit::TestCase
   def test_depth_first
