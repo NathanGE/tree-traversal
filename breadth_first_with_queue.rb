@@ -28,7 +28,7 @@ class Queue
   end
 
   def enqueue(item)
-    @queue.push(item)
+    @queue << item
   end
 
   def dequeue
