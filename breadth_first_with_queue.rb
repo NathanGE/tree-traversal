@@ -7,7 +7,6 @@ class Tree
   end
 end
 
-
 # The "Leafs" of a tree, elements that have no children
 deep_fifth_node = Tree.new(5, [])
 eleventh_node = Tree.new(11, [])
@@ -34,4 +33,25 @@ class Queue
   def dequeue
     @queue.shift
   end
+
+  def empty?
+    @queue.size == 0
+  end
 end
+
+def breadth_first(node, target)
+  queue = Queue.new
+  queue.enqueue(node)
+  until queue.empty?
+    current = queue.dequeue
+    return current if current.payload == target
+    if current.children
+      current.children.each do |child|
+        queue.enqueue(child)
+      end
+    end
+  end
+  nil
+end
+
+p breadth_first(trunk, 11)
