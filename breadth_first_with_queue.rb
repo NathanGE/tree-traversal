@@ -1,3 +1,4 @@
+# breadth-first search with a queue data structure
 class Tree
   attr_accessor :payload, :children
 
