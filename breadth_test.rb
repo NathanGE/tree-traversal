@@ -14,6 +14,9 @@ class DepthFirstTest < MiniTest::Unit::TestCase
     shallow_fifth_node = Tree.new(5, [ninth_node])
     # Trunk
     trunk = Tree.new(2, [seventh_node, shallow_fifth_node])
+    # tests
     assert_equal eleventh_node, breadth_first(trunk, 11)
+    assert_equal nil, breadth_first(trunk, 25)
+    assert_equal trunk, breadth_first(trunk, 2)
   end
 end
