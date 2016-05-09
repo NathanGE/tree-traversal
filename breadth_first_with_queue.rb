@@ -21,7 +21,7 @@ class Queue
   end
 
   def empty?
-    @queue.size == 0
+    @queue.empty?
   end
 end
 

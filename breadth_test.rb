@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'breadth_first'
+require_relative 'breadth_first_with_queue'
 
 class DepthFirstTest < MiniTest::Unit::TestCase
   def test_depth_first
