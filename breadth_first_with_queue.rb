@@ -32,8 +32,6 @@ def breadth_first(node, target)
   until queue.empty?
     current = queue.dequeue
     return current if current.payload == target
-    if current.children
-      current.children.each{ |child| queue.enqueue(child) }
-    end
+    current.children.each{ |child| queue.enqueue(child) }
   end
 end
